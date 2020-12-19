@@ -1,0 +1,19 @@
+name: 'LelineaITManufaktur/setup-ssh-action'
+description: 'Set up SSH'
+inputs:
+    ssh-private-key:
+        description: 'SSH key to use'
+        required: true
+    ssh-known-hosts:
+        description: 'SSH known hosts file '
+        required: false
+    ssh-disable-host-key-checking:
+        description: 'Turn off host key checking (insecure!)'
+        required: false
+
+runs:
+    using: 'node12'
+    main: 'dist/index.js'
+branding:
+    icon: server
+    color: 'yellow'
